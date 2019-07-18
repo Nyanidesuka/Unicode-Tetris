@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tetris View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TetrisViewController" customModule="gameboyTry2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-Ed-0tx">
+                                <rect key="frame" x="32" y="53" width="350" height="589"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="589" id="Byt-Xx-dXj"/>
+                                </constraints>
+                                <string key="text">🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘
+🔘🔘🔘🔘🔘🔘🔘🔘🔘🔘</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiO-fN-dae">
+                                <rect key="frame" x="32" y="690" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="⬅️"/>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="rCj-61-sYV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-8w-DBU">
+                                <rect key="frame" x="312" y="690" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="🔃"/>
+                                <connections>
+                                    <action selector="rotateButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3og-1i-PHC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8n-Kt-YzS">
+                                <rect key="frame" x="140" y="690" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="➡️"/>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="L2n-fT-eEY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-X6-N2O">
+                                <rect key="frame" x="32" y="650" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERP-Sp-xkb">
+                                <rect key="frame" x="86" y="766" width="54" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="⬇️"/>
+                                <connections>
+                                    <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="jJa-dp-Zgl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(print score)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grn-hx-h5H">
+                                <rect key="frame" x="98" y="650" width="284" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TmF-Ed-0tx" secondAttribute="trailing" constant="32" id="0h9-ez-9WC"/>
+                            <constraint firstItem="ERP-Sp-xkb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="4H9-JX-X6Q"/>
+                            <constraint firstItem="TmF-Ed-0tx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="1.2" id="4XC-1L-kGw"/>
+                            <constraint firstItem="grn-hx-h5H" firstAttribute="top" secondItem="TmF-Ed-0tx" secondAttribute="bottom" constant="8" id="CHX-9Q-OIw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ERP-Sp-xkb" secondAttribute="bottom" constant="24" id="ELv-ty-Tbc"/>
+                            <constraint firstItem="grn-hx-h5H" firstAttribute="leading" secondItem="aFh-X6-N2O" secondAttribute="trailing" constant="8" id="Mkt-Gl-Z7R"/>
+                            <constraint firstItem="uiO-fN-dae" firstAttribute="top" secondItem="aFh-X6-N2O" secondAttribute="bottom" constant="19" id="Nbk-xP-0Ar"/>
+                            <constraint firstItem="wBt-8w-DBU" firstAttribute="top" secondItem="grn-hx-h5H" secondAttribute="bottom" constant="19" id="Oek-nz-no2"/>
+                            <constraint firstItem="uiO-fN-dae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="RX0-Ww-lhV"/>
+                            <constraint firstItem="TmF-Ed-0tx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQ1-0s-iNk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="grn-hx-h5H" secondAttribute="trailing" constant="32" id="a4j-cb-78z"/>
+                            <constraint firstItem="X8n-Kt-YzS" firstAttribute="leading" secondItem="uiO-fN-dae" secondAttribute="trailing" constant="54" id="cA0-1p-YoE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wBt-8w-DBU" secondAttribute="trailing" constant="48" id="f30-3A-Iae"/>
+                            <constraint firstItem="aFh-X6-N2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="hqA-pK-9HA"/>
+                            <constraint firstItem="X8n-Kt-YzS" firstAttribute="top" secondItem="grn-hx-h5H" secondAttribute="bottom" constant="19" id="mkI-eQ-Xkp"/>
+                            <constraint firstItem="aFh-X6-N2O" firstAttribute="top" secondItem="TmF-Ed-0tx" secondAttribute="bottom" constant="8" id="rKW-dg-cOw"/>
+                            <constraint firstItem="TmF-Ed-0tx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="sa6-Aq-g4s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downButton" destination="ERP-Sp-xkb" id="Jxz-k5-ABt"/>
+                        <outlet property="leftButton" destination="uiO-fN-dae" id="Q4e-Zj-nqu"/>
+                        <outlet property="rightButton" destination="X8n-Kt-YzS" id="RgO-kf-d5f"/>
+                        <outlet property="rotateButton" destination="wBt-8w-DBU" id="Ell-JV-Ucl"/>
+                        <outlet property="scoreLabel" destination="grn-hx-h5H" id="TXU-9X-TfY"/>
+                        <outlet property="tetrisTextField" destination="TmF-Ed-0tx" id="qve-7b-9mQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
